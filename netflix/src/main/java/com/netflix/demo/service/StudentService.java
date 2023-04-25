@@ -24,5 +24,17 @@ public class StudentService {
 		return obj;
 		
 	}
-
+	public Student updateStudent(Student s) {
+		Student obj = studRepository.save(s);
+		return obj;
+	}
+	public void deleteStudent(int regno)
+	{
+		studRepository.deleteById(regno);
+	}
+	public Student getStudent(int regno)
+	{
+		Student s =studRepository.findById(regno).get();
+		return s;
+	}
 }
