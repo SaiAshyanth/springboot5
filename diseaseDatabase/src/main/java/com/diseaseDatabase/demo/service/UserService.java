@@ -1,4 +1,4 @@
-package com.review.demo.service;
+package com.diseaseDatabase.demo.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.review.demo.model.User;
-import com.review.demo.repository.UserRepository;
+import com.diseaseDatabase.demo.model.User;
+import com.diseaseDatabase.demo.repository.UserRepository;
 
 @Service
 public class UserService {

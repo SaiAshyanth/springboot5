@@ -1,4 +1,4 @@
-package com.review.demo.service;
+package com.diseaseDatabase.demo.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,9 +9,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import com.diseaseDatabase.demo.model.Disease;
+import com.diseaseDatabase.demo.repository.DiseaseRepository;
 
-import com.review.demo.model.Disease;
-import com.review.demo.repository.DiseaseRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class DiseaseService {
@@ -62,10 +64,26 @@ public class DiseaseService {
 	{
 		return disRepository.findByNameEndingWith(suffix);
 	}
-	public List<Disease> fetchDiseaseByCountry(String country)
+	public List<Disease> fetchDiseaseByNameCountry(String country)
 	{
 		return disRepository.findByCountry(country);
 	}
-	
-	
+	public List<Disease> getDiseaseByCountry(String country,String name)
+	  {
+		  return disRepository.getDiseaseByCountry(country,name);
+	  }
+	@Transactional 
+     public int deleteDiseaseByName(String name) {
+		
+		return disRepository.deleteDiseaseByName(name);
+	}
+	@Transactional
+	public int updateDiseaseByName(String country,String name)
+	{
+		return disRepository.updateDiseaseByName(country, name);
+	}
+	public List<Disease> fetchDiseaseByCountry(String country)
+	{
+		return disRepository.fetchDiseaseByCountry(country);
+	}
 }

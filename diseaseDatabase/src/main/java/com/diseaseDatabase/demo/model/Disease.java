@@ -1,4 +1,6 @@
-package com.review.demo.model;
+
+
+package com.diseaseDatabase.demo.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

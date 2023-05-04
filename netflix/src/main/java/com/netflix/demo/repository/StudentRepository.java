@@ -28,5 +28,6 @@ public interface StudentRepository extends JpaRepository<Student,Integer>
 	    List<Student> findByNameStartingWith(String prefix);
 	    List<Student> findByNameEndingWith(String suffix);
 	    List<Student> findByDept(String dept);
+
   
 }
