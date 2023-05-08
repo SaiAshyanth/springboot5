@@ -110,7 +110,7 @@ public class DiseaseContoller {
  	   else
  		    return "Problem occured";
     }
-      @Tag(name="Get Method to Disease by country name",description="Get Disease info by country")
+      @Tag(name="Get Method to get Disease by country name",description="Get Disease info by country")
     @GetMapping("/fetchDiseaseByCountryName/{country}")
     public List<Disease> fetchDiseaseByCountry(@PathVariable String country)
     {
